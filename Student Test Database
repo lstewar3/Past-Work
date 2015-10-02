@@ -5,7 +5,7 @@
 
 CREATE TABLE StudentTest(first_name VARCHAR(30) NOT NULL, last_name VARCHAR(30), email VARCHAR(60) NULL, street VARCHAR(50) NOT NULL, city VARCHAR(40) NOT NULL, state CHAR(2) NOT NULL DEFAULT "PA", zip MEDIUMINT UNSIGNED NOT NULL, phone VARCHAR(20), birth_date DATE NOT NULL, sex ENUM('M','F') NOT NULL,date_entered TIMESTAMP, luch_cost FLOAT NULL, student_if INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY);
 
-### Remeber a table is like a python library in many senses. Here I create a table. 
+### Remember a table is like a python library in many senses. Here I create a table. 
 ### Remember that NOT NULL guarantees that the data is in the data set. Required Data. 
 ### Remember VARCHAR() is a variable number of characters and is a data set. 
 ### -------- CHAR() is the explicit version of VARCHAR 

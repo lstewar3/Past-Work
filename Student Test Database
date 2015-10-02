@@ -132,6 +132,7 @@ SELECT COUNT(*) FROM studenttest GROUP BY sex;
 SELECT MONTH(birth_date) As 'Month', COUNT(*) FROM studenttest GROUP BY Month ORDER BY Month; 
 # allows you to narrow the results after the query is executed
 
-
+#n Print off min max, range, and mean of test scores. 
+SELECT test_id AS 'Test', MIN(score) AS min, MAX(score) AS max, MAX(score)-MIN(score) AS 'range', SUM(score) AS total, AVG(score) AS average FROM score GROUP BY test_id;
 
 

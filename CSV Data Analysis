@@ -10,11 +10,12 @@
     #(i) Check your current directory 
 
 getwd() # this will show you what working directory you are currently in 
-        
+  
     #(ii) Change your working directory to the directory containing the file
          #a. in the Rstudio IDE you simply move to the "files" console, click more, and select set as working directory
          #b. in R , select file, and click change dir 
-#(3)
+
+#(3) Assign the file to a environment object 
 
 vv <- read.csv("example.csv") 
 
@@ -55,7 +56,6 @@ v[1:2,2:3] # extract first and second row and second and third column
 v[,c(1,3)] # extract first and third columns all rows 
 
 #(7) Analyis - Detailed Questionns 
-
 
 #---- (a) Find the mean of a column on values where 1 column is above 30 and the other column is above 80---
 ls() #check to see what objects you have in your environment

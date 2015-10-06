@@ -34,6 +34,7 @@ dim(vv[!complete.cases(vv),])# will return the number of rows and columns of mis
 
 #(5) Analysis - Acquire info about the dataset, look for trends *note we are using the new dataset with out NA values
 
+summary(v) #great place to start, find out mean,med,max,min,and quartiles for variables
 class(v) # check to see what class my data is. should be dataset
 dim(v) # this will return an integer vector with the # of rows and columns in the dataset object
 colSums(v)# calcualtes the column sums of the array 
@@ -42,7 +43,7 @@ RowNames(v)# I use this to see how many "observations" or rows are in the datase
 colnames(v)# I use this to what the column names are. These are unique identifiers. 
 rowMeans(v)# calculates the row means
 rowMeans(vv,na.rm=TRUE) # returns row means of original dataset but omits NA values
-colMeans(v)# calculates the column means 
+colMeans(v)# calculates the column means * note summary function also provides this info 
 colMeans(vv,na.rm=TRUE) #returns column means of original dataset but omits NA values *good to use if you dont want to create a whole new dataset without missing values*
 
 #(6) Analysis - Rows and Column Commands 

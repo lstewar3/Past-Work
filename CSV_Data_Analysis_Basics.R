@@ -1,11 +1,9 @@
 #Lyle A. Stewart
 
-##Download and manipulate data from a CSV file ## note this example would also work using an R CRAN dataset 
-## for this example, the file is named example.csv | I will save the dataset file to the object "vv" and analyze. 
+# Download and manipulate data from a CSV file ## note this example would also work using an R CRAN dataset for this example, the file is named example.csv | I will save the dataset file to the object "vv" and analyze. 
 
 #(1) : Download file to local directory
-#(2) : Change R working directory to the directory in which the file is located (if you downloaded a data set from the internet, your
-    ##file will probaby be under the c:/ drive, downloads, file. 
+#(2) : Change R working directory to the directory in which the file is located (if you downloaded a data set from the internet, your file will probaby be under the c:/ drive, downloads, file.)
 
     #(i) Check your current directory 
 
@@ -19,10 +17,7 @@ getwd() # this will show you what working directory you are currently in
 
 vv <- read.csv("example.csv") 
 
-     # this will read the data into R in an array much like excel would open the csv and separate columnns 
-     ## according to the dilimeters. comma is the dilimeter in a csv. 
-    ### NOTE That I use the assignment operator to initiate the object vv as the symbol for the data 
-    #### THIS allows me to easily call functions on the dataset without having to keep "reading" it in. 
+# this will read the data into R in an array much like excel would open the csv and separate columnns according to the dilimeters. comma is the dilimeter in a csv. NOTE That I use the assignment operator to initiate the object vv as the symbol for the data. THIS allows me to easily call functions on the dataset without having to keep "reading" it in. 
 
 #(4) Exculde the missing values from analyses *not always necesary* 
 

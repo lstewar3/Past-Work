@@ -1,0 +1,59 @@
+#Lyle A. Stewart | CSV Data Analyis 
+
+##Download and manipulate data from a CSV file ## note this example would also work using an R CRAN dataset 
+## for this example, the file is named example.csv
+
+#(1) : Download file to local directory
+#(2) : Change R working directory to the directory in which the file is located (if you downloaded a data set from the internet, your
+    ##file will probaby be under the c:/ drive, downloads, file. 
+
+    #(i) Check your current directory 
+
+getwd() # this will show you what working directory you are currently in 
+        
+    #(ii) Change your working directory to the directory containing the file
+         #a. in the Rstudio IDE you simply move to the "files" console, click more, and select set as working directory
+         #b. in R , select file, and click change dir 
+#(3)
+
+vv <- read.csv("example.csv") 
+
+                        # this will read the data into R in an array much like excel would open the csv and separate columnns 
+                        ## according to the dilimeters. comma is the dilimeter in a csv. 
+                        ### NOTE That I use the assignment operator to initiate the object vv as the symbol name for the data
+                        #### THIS allows me to easily call functions on the dataset without having to keep "reading" it in. 
+
+#(4) Exculde the missing values from analyses (*not always necessary *)
+
+vv[!complete.cases(vv),] # returns logical vector indicating which cases are complete "which rows have any NA values"
+newdata <- na.omit(vv) # this creates a new dataset without missing data
+v <- newdata # this creates a new object named v that is equal to the new data set, easier to read
+dim(vv[!complete.cases(vv),])# will return the number of rows and columns of missing values in the original dataset
+
+#(5) Analysis - Get info about the dataset *note we are using the new dataset with out NA values, "v"
+
+class(v) # check to see what class my data is. should be dataset
+dim(v) # this will return an integer vector with the # of rows and columns in the dataset object
+colSums(v)# calcualtes the column sums of the array 
+rowSums(v)# calculates the row sums of the array 
+RowNames(v)# I use this to see how many "observations" or rows are in the dataset. I can also use dim function to see # of rows. 
+colnames(v)# I use this to what the column names are. These are unique identifiers. 
+rowMeans(v)# calculates the row means
+rowMeans(vv,na.rm=TRUE) # returns row means of original dataset but omits NA values
+colMeans(v)# calculates the column means 
+colMeans(vv,na.rm=TRUE) #returns column means of original dataset but omits NA values *good to use if you dont want to create a whole new dataset without missing values*
+
+#(6) Analysis - Rows and Column Commands 
+
+v[,] #extract all rows and columns (*note will return numeric vector)
+v[1,] #extract first row and all columns 
+v[,1] #extract all rows first column
+v[1:2,] #extract first two rows and all columns 
+v[c(1,3),] # extract first and third row and all columns
+v[1:2,2:3] # extract first and second row and second and third column
+v[,c(1,3)] # extract first and third columns all rows 
+
+#(7) Analyis - Other Commmands/Functions
+
+as.data.frame(v[,1]) # will extract and print column 1 with all rows as a dataframe as opposed to a numeric vector  
+v[2,3] # this is a command to extract an element at row 2 and column 3

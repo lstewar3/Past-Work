@@ -1,4 +1,4 @@
-## Lyle A. Stewart 
+# Lyle A. Stewart 
 # Dictionary Creation and Manipulation Example | Grocery List 
 
 #(1) create dictionary named prices and attach values 
@@ -55,10 +55,7 @@ def compute_bill(food): #define function compute_bill W one argument, food
     return total
     # function will work for any food
 
-# (5) Change compute_bill function to take stock/inventory of a particular
-## item into account when computing the cost - If an item is not in
-### stock then it can not be included in the total - you can not sell 
-#### what you do not have 
+# (5) Change compute_bill function to take stock/inventory of a particular item into account when computing the cost - If an item is not in stock then it can not be included in the total - you can not sell what you do not have. 
 
 shopping_list = ["banana", "orange", "apple"]
 

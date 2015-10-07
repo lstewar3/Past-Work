@@ -3,7 +3,7 @@
 #(1) Pick R data set to analyze 
 data() #this opens the list of available R data sets
 
-#(2) Once you have selected your data set. Open the code below in an r script and hit ctrl+F. This will start the search prompt. Search for Insert_Data_Set_Name and replace it with the name of your chosen dataset. 
+#(2) Once you have selected your data set. Open the code below in an r script and hit ctrl+F. This will start the search prompt. Search for Insert_Data_Set_Name and replace it with the name of your chosen dataset.
 
 library(datasets) #download dat from CRAN
 data(Insert_Data_Set_Name) #loads data into workspace

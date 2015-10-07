@@ -93,3 +93,4 @@ v[2,3] # this is a command to extract an element at row 2 and column 3
 getwd() # check what directory you are currently in. This is where your file will save 
 file.create("test.csv")# will create an empty csv file named test in your working directory 
 write.csv(v,"test,csv") # will write your data set *remember v is new dataset without missing values* to the test.csv file, you would probably want to upload your orginial dataset with missing values if you want to analyze in excel or use another program to continue your analysis/reporting
+file.exists("test.csv") # will double check to see if your new file is actually there. If so will return TRUE. 

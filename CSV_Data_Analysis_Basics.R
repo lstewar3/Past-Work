@@ -58,7 +58,7 @@ ls() #check to see what objects you have in your environment
 f <- subset(vv,Column_name==6) # assign subset of all values where column_name = 6 to the object f
 y <- numeric(6)# create a vector of the numeric class with length six to fill with releant column values 
 for (i in 1:6){
-    y[i] <-Mean(f[,i],na.rm=TRUE)# remenber we are using Original data so remove NA values 
+    y[i] <-Mean(f[,i],na.rm=TRUE)# Remember we are using original data so remove NA values 
 }#this 4 loop will iterate over columnns 1 through 6 and take the means.because we are using data set f instead of vv or v, we will be taking the column means given the value paramaters for other columns 
 print(y) # print out the numeric vector y with its new values after the loop has finished 
 
@@ -91,5 +91,5 @@ v[2,3] # this is a command to extract an element at row 2 and column 3
 
 #(9) Write results to new CSV File 
 getwd() # check what directory you are currently in. This is where your file will save 
-file.creaate("test.csv")# will create an empty csv file named test in your working directory 
+file.create("test.csv")# will create an empty csv file named test in your working directory 
 write.csv(v,"test,csv") # will write your data set *remember v is new dataset without missing values* to the test.csv file, you would probably want to upload your orginial dataset with missing values if you want to analyze in excel or use another program to continue your analysis/reporting

@@ -18,7 +18,7 @@ getwd() # this will show you what working directory you are currently in
 vv <- read.csv("example.csv") # this will read the data into R in an array much like excel would open the csv and separate columnns according to the dilimeters. comma is the dilimeter in a csv. NOTE That I use the assignment operator to initiate the object vv as the symbol for the data. THIS allows me to easily call functions on the dataset without having to keep "reading" it in. 
 class(vv) # check to see what class my data is. should be dataset
 
-#(4) Exculde the missing values from analyses *not always necesary* 
+#(4) Exclude the missing values from analyses *not always necessary*
 
 vv[!complete.cases(vv),] # returns logical vector indicating which cases are complete "which rows have any NA values"
 missing <- is.na(v[,1]) # note this does almost the same thing as the above function, except it finds how many missing values are in the first column only
@@ -41,7 +41,7 @@ vv[c(1,3),] # extract first and third row and all columns
 vv[1:2,2:3] # extract first and second row and second and third column
 vv[,c(1,3)] # extract first and third columns all rows 
 
-#(7) Analyis - Detailed Questionns 
+#(7) Analysis - Detailed Questions 
 
 #---- (a) Find the mean of a column on values where 1 column is above 30 and the other column is above 80
 ls() #check to see what objects you have in your environment

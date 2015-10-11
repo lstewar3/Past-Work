@@ -3,9 +3,6 @@
 #greater than the threshold. The function should return a vector of correlations for the monitors that meet the threshold 
 #requirement. If no monitors meet the threshold requirement, then the function should return a numeric vector of length 0. 
 
-
-
-
 corr <- function(directory,threshold=0){
     fcorr <- function(fun){
         data <- read.csv(file.path(directory,fun))

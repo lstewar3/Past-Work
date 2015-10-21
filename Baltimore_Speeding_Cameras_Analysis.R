@@ -17,7 +17,7 @@ dateDownloaded <- date() # Always remember the downlaod date
 install.packages("xlsx")
 install.pacakges("openxlsx")
 library(openxlsx)
-#note openXL() function will open the workbooks 
+#note openXL() function will open the workbooks * remember for when you need to iterate over a directory with many files
 help(package="openxlsx") # look for how to read data - see what functions are in your new package and applications 
 cameraData <- read.xlsx("./test2/cameras.xlsx")
 head(cameraData) # get first 6 rows 

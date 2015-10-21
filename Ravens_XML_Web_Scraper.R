@@ -1,3 +1,7 @@
+# Lyle A. Stewart 
+# This code provides a web scraper that will go through the Baltimore Ravens (NFL) ESPN website and scrape the raw data to return
+# the team name , record, ranking, and next game. 
+
 fileUrl <- "http://espn.go.com/nfl/team/_/name/bal/baltimore-ravens"
 doc <- htmlTreeParse(fileUrl,useInternalNodes=TRUE)
 # use htmltreeparse instead of xml treeparese because this is an html file now from the web

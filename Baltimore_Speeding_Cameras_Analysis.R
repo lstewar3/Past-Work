@@ -26,7 +26,7 @@ tail(cameraData)
 #--- SUBSET - READ SPECIFIC COLUMNS AND ROWS ---
 cameraDataSubset <- cameraData[1:4,2:3] # extract a little part of the file
 
-    An alternative way to read specific columns and rows 
+    ##An alternative way to read specific columns and rows 
     #colIndex <-2:3
     #rowIndex<-1:4
     #cameraDataSubset <- read.xlsx("./test2/cameras.xlsx",sheetIndex=1,colIndex=colIndex,rowIndex=rowIndex)

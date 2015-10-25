@@ -1,5 +1,5 @@
 # Lyle A. Stewart 
-# This code provides a web scraper that will go through the Baltimore Ravens (NFL) ESPN website and scrape the raw data to return
+# This code provides a web scraper that will go through the Baltimore Ravens (NFL) ESPN website and scrape the raw XML data to return
 # the team name , record, ranking, and next game. 
 
 fileUrl <- "http://espn.go.com/nfl/team/_/name/bal/baltimore-ravens"
@@ -12,7 +12,7 @@ ranking <- xpathSApply(doc,"//li[@class='ranking']",xmlValue)
 team <- xpathSApply(doc,"//li[@class='team-name']",xmlValue)
 nextgame <- xpathSApply(doc,"//li[@class='nextGame']",xmlValue)
 
-team
-record
-ranking 
-nextgame 
+team # print the name of team being analyzed
+record # print the teams record
+ranking # print the teams current ranking
+nextgame #print the teams next game 

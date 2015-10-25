@@ -1,6 +1,6 @@
 ### Lyle A. Stewart
 
-# - This analysis measures human activity recognition via smartphones
+- This analysis measures human activity recognition via smartphones
 - I have written a code to measure specific pieces of the overall experiement outcomes. 
 - Please note that you can find more information on the experiment here -> 
 [Experiment Data Background](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones "Experiment Data Background")

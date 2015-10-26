@@ -4,18 +4,18 @@ library(reshape2)
 installed.packages()
 
 ## Create directory to house the data 
-setwd("~/Coursera/R Functions/Getting_And_Cleaning_Data")
-if (!file.exists("CourseAssignment")) {
-    dir.create("CourseAssignment")
+setwd("~/Analysis/R Functions/Data_Analysis")
+if (!file.exists("HA_Analysis")) {
+    dir.create("HA_Analysis")
 } else{
     print("file exists")
 }
 
 ## Set WD for the project
-setwd("C:/Users/Katherine/Documents/Coursera/R Functions/Getting_And_Cleaning_Data/CourseAssignment")
+setwd("C:/Users/Lyle/Documents/Analysis/R Functions/Data_Analysis/HA_Analysis")
 
 ##Download and unzip the dataset 
-filepath <- "./CourseAssignment/getdata.zip"
+filepath <- "./HA_Analysis/getdata.zip"
 filename <- "getdata.zip"
 
 if (!file.exists(filename)){

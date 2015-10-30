@@ -1,9 +1,9 @@
-      ---
-      title: "Twitter API Search Database"
-      author: "Lyle Stewart"
-      date: "October 30, 2015"
-      output: pdf_document
-      ---
+---
+title: "Twitter API Search Database"
+author: "Lyle Stewart"
+date: "October 30, 2015"
+output: pdf_document
+---
 
 ###Introduction
 This R Markdown explains how I built My `Twitter API Search Tool` and `SQL Database`. This document will explain the following; 

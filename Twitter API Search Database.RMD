@@ -29,7 +29,7 @@ shell.exec("https://twitter.com/yourTwitterName")
 
 ```
 
-###Create And Connect To A `SQL` Database And Use R To send Tweet Results From A Query To The Database For Further Analysis. 
+###Create And Connect To `SQL` Database And Use R To send Tweet Results From A Query To The Database For Further Analysis. 
 ```{r}
 
 Connect = dbConnect(MySQL(),user='yourUserName',password='yourPassword')

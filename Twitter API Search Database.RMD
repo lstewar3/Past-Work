@@ -11,7 +11,7 @@ This R Markdown explains how I built a `Twitter API Search Tool` and correlating
 1. How I created the search tool
 2. How I linked `R` to `MySQL` local server in effort to write results from my search query into a database that I created. 
 
-###Install Packages and prepare workspace 
+###Install Packages and Prepare Workspace 
 ```{R}
 Winstall.packages("twitteR")
 library(twitteR)
@@ -29,7 +29,7 @@ shell.exec("https://twitter.com/yourTwitterName")
 
 ```
 
-###Create and connect to your `MySQL` database and use R to send tweets from a query to the databse for further analysis. 
+###Create And Connect To A `SQL` Database And Use R To send Tweet Results From A Query To The Database For Further Analysis. 
 ```{r}
 
 Connect = dbConnect(MySQL(),user='yourUserName',password='yourPassword')

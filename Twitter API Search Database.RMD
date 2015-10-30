@@ -66,6 +66,10 @@ twitSearch <- function(x){
    temp <- searchTwitter(x)
    as.list(temp)
 }#create search tool so that you can easily analyze your time line with different search queries
+twitSearch("#Lyle") 
+twitSearch("@NFL")
+twitSearch("olympics")
+# test out your search tool
 
 tweets <- searchTwitter("Hello World")
 # save your tweet analysis to a list form 

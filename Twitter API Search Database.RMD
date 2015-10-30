@@ -1,6 +1,3 @@
-##LyleAStewart.com
-
-
 ---
 title: "Twitter API Search Database"
 author: "Lyle Stewart"

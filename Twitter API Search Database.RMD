@@ -1,0 +1,80 @@
+---
+title: "Twitter API Search Database"
+author: "Lyle Stewart"
+date: "October 30, 2015"
+output: pdf_document
+---
+
+#INTRODUCTION
+This R Markdown explains how I built My Twitter API Search Tool and SQL Database. This document will explain the following; 
+
+1. How I created the search tool
+2. How I linked R to MySQL local server in effort to write results from my search query into a database that I created. 
+
+#(1) Install Packages and prepare workspace 
+```{R}
+Winstall.packages("twitteR")
+library(twitteR)
+setup_twitter_oauth("consumerKey,consumerSecret,token,tokenSecret")
+#set up and authorize your twitter through R 
+
+searchTwitter("hello world") 
+#test out the package
+
+library(RMySQL)
+# load RMySQL package for later 
+
+shell.exec("https://twitter.com/yourTwitterName")
+# check my TL to see if the recent tweets match up 
+
+```
+
+# (2) Create and connect to your MySQL database and use R to send tweets from a query to the databse for further analysis. 
+```{r}
+
+Connect = dbConnect(MySQL(),user='yourUserName',password='yourPassword')
+# connect to MySQL server
+
+mydb= dbConnect(MySQL(),
+                user='yourUserName',
+                password='yourPassword',
+                dbname='yourDataBaseName',
+                host= 'localhost')
+# connect to the database of your choice 
+
+AggDBs <- dbGetQuery(mydb,"show databases;");
+AggDBs
+# list out all of the database schemas in MySQL server
+
+register_mysql_backend(db_name = 'yourDataBaseName',
+                       host='localhost',
+                       user='yourUserName',
+                       password='yourPassword')
+#register db backend to store and load tweet and user data
+
+dbListTables(mydb)
+# list all of the tables within the current database
+
+if (!dbExistsTable(mydb,"tweets")){
+    x<-data.frame()
+    dbWriteTable(mydb,name='tweets',value=x,rownames=NA,overwrite=FALSE,append=FALSE,field.types)
+}else{
+    print("You already have a database by that name")
+}# create the table you want to push data to ("tweets" in this case) and or check to see if you have already created a table by that name
+
+twitSearch <- function(x){
+   temp <- searchTwitter(x)
+   as.list(temp)
+}#create search tool so that you can easily analyze your time line with different search queries
+
+tweets <- searchTwitter("Hello World")
+# save your tweet analysis to a list form 
+tweetsDataFrame<- twListToDF(tweets)
+# turn your list of results to a dataframe so that you can write to SQL
+dbWriteTable(mydb,"tweets",tweetsDataFrame,overwrite=TRUE)
+#write results to mysql database 
+
+dbDisconnect(mydb)
+#disconnect from databases when you are finished
+```
+

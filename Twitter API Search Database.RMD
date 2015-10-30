@@ -9,7 +9,7 @@ output: pdf_document
 This R Markdown explains how I built My Twitter API Search Tool and SQL Database. This document will explain the following; 
 
 1. How I created the search tool
-2. How I linked R to MySQL local server in effort to write results from my search query into a database that I created. 
+2. How I linked `R` to `MySQL` local server in effort to write results from my search query into a database that I created. 
 
 ###(1) Install Packages and prepare workspace 
 ```{R}
@@ -29,7 +29,7 @@ shell.exec("https://twitter.com/yourTwitterName")
 
 ```
 
-###(2) Create and connect to your MySQL database and use R to send tweets from a query to the databse for further analysis. 
+###(2) Create and connect to your `MySQL` database and use R to send tweets from a query to the databse for further analysis. 
 ```{r}
 
 Connect = dbConnect(MySQL(),user='yourUserName',password='yourPassword')

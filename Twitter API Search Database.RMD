@@ -13,7 +13,7 @@ This R Markdown explains how I built a `Twitter API Search Tool` and correlating
 
 ###Install Packages and Prepare Workspace 
 ```{R}
-Winstall.packages("twitteR")
+install.packages("twitteR")
 library(twitteR)
 setup_twitter_oauth("consumerKey,consumerSecret,token,tokenSecret")
 #set up and authorize your twitter through R 
